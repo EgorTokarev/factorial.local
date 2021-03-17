@@ -13,4 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Маршрут для загрузки формы
+Route::get(
+    '/',
+    [ConverterController::class, 'index']
+)->name('index');
 
