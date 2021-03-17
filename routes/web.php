@@ -19,3 +19,8 @@ Route::get(
     [ConverterController::class, 'index']
 )->name('index');
 
+// Маршрут для вычисление факториала числа
+Route::post(
+    '/',
+    [ConverterController::class, 'factorial']
+)->name('factorial');
