@@ -26,12 +26,7 @@ class ConverterController extends Controller
     {
         // Получение данных
         $number = $request->number;
-
-        // Вычисление факториала
         $factorial = 1;
-        for ($i=1; $i <= $number; $i++) {
-            $factorial *= $i;
-        }
         // Передача данных представлений
         return view('index', [
             'number' => $number,
