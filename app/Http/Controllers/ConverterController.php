@@ -28,7 +28,7 @@ class ConverterController extends Controller
         $number = $request->number;
         // Валидация
         $validated = $request->validate([
-            'number' => 'required|integer|min:0',
+            'number' => 'required|numeric|integer|min:0',
         ]);
         // Вычисление факториала
         $factorial = 1;
