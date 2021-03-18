@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\FactorialRequest;
 
 class ConverterController extends Controller
 {
@@ -18,18 +18,15 @@ class ConverterController extends Controller
     /**
      * числение факториала
      *
-     * @param  request $request
+     * @param  FactorialRequest $request
      *
      * @return View представление
      */
-    public function factorial(Request $request)
+    public function factorial(FactorialRequest $request)
     {
         // Получение данных
         $number = $request->number;
-        // Валидация
-        $validated = $request->validate([
-            'number' => 'required|numeric|integer|min:0',
-        ]);
+
         // Вычисление факториала
         $factorial = 1;
         for ($i=1; $i <= $number; $i++) {
