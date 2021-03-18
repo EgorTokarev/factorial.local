@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ConverterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,4 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Маршрут для загрузки формы
+Route::get(
+    '/',
+    [ConverterController::class, 'index']
+)->name('index');
 
+// Маршрут для вычисление факториала числа
+Route::post(
+    '/',
+    [ConverterController::class, 'factorial']
+)->name('factorial');
