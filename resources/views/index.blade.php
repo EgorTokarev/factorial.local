@@ -14,7 +14,7 @@
         <!-- Форма для передачи данных -->
         <form action="{{ route('factorial') }}" method="post">
             @csrf
-            <label for="number">Factorial</label>
+            <label for="number">Факториал</label>
             <input type="text" name="number" id="number"
             value="{{ $number ?? old('number') }}">
             <button type="submit">Вычислить</button>
