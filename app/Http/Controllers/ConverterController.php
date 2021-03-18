@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Converter;
+
 use App\Http\Requests\FactorialRequest;
 
 class ConverterController extends Controller
@@ -26,7 +28,7 @@ class ConverterController extends Controller
     {
         // Получение данных
         $number = $request->number;
-        $factorial = 1;
+        $factorial = Converter::factorial($number);
         // Передача данных представлений
         return view('index', [
             'number' => $number,
