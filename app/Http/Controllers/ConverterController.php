@@ -35,4 +35,41 @@ class ConverterController extends Controller
             'factorial' => $factorial,
         ]);
     }
+        /**
+     * числение факториала
+     *
+     * @param  FactorialRequest $request
+     *
+     * @return View представление
+     */
+    public function fahrenheit(Request $request)
+    {
+        // Получение данных
+        $number = $request->number;
+        $fahrenheit = Converter::fahrenheit($number);
+        // Передача данных представлений
+        return view('index', [
+            'number' => $number,
+            'fahrenheit' => $fahrenheit,
+        ]);
+    }
+            /**
+     * числение факториала
+     *
+     * @param  FactorialRequest $request
+     *
+     * @return View представление
+     */
+    public function celsius(Request $request)
+    {
+        // Получение данных
+        $number = $request->number;
+        $celsius = Converter::celsius($number);
+        // Передача данных представлений
+        return view('index', [
+            'number' => $number,
+            'celsius' => $celsius,
+        ]);
+    }
 }
+
