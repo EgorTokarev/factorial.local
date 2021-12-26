@@ -42,7 +42,7 @@ class ConverterController extends Controller
      *
      * @return View представление
      */
-    public function fahrenheit(Request $request)
+    public function fahrenheit(FactorialRequest $request)
     {
         // Получение данных
         $number = $request->number;
@@ -60,7 +60,7 @@ class ConverterController extends Controller
      *
      * @return View представление
      */
-    public function celsius(Request $request)
+    public function celsius(FactorialRequest $request)
     {
         // Получение данных
         $number = $request->number;
